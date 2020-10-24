@@ -1,0 +1,6 @@
+# 秘密情報記載ファイル
+# EC2にデプロイする時はこの方法だときついかも？
+myhomepage/settings_secret.py
+
+# pythonコンパイルファイルの無視
+*.pyc
