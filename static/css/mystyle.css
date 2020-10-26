@@ -1,0 +1,14 @@
+header.masthead{
+    background-image: url("../assets/img/my-header-bg.jpg");
+}
+body, #wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+footer {
+    margin-top: auto;
+}
+.line-spaceing {
+    line-height: 0.5;
+}

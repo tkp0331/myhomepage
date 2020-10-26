@@ -1,21 +1,63 @@
-<!--HTMLのversion宣言。この場合はHTML5となる-->
-<!DOCTYPE html>
+{% extends 'base.html' %}
 
-<!--htmlの内容を示す。必須要素の一つ-->
-<html lang="ja">
+{% load static %}
 
+{% block title %}とある東北大院生のHP{% endblock %}
 
-<head>
-    <!--文字コードの宣言-->
-    <meta charset="UTF-8">
-    <meta name="author" content="Takahiro Suzuki">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="鈴木貴大の個人ホームページ。勉強しながらなのでコメント多めです。">
-    <title>とある東北大学院生のHP</title>
-</head>
+{% block header %}
 
-<body>
-    <h1>Hello World</h1>
-</body>
+<header class="masthead">
+    <div class="container">
+        <div class="masthead-subheading">Welcome To My Home Page!</div>
+        <div class="masthead-heading text-uppercase">とある東北大院生のHP</div>
+    </div>
+</header>
 
-</html>
+{% endblock %}
+
+{% block contents %}
+<section>
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 order-lg-2">
+                <div class="row align-items-center">
+                    <div class="col-lg-12 box">
+                        <div class="p-2">
+                            <h5 class="display-5">ちょっと自己紹介</h5>
+                            <p>
+                                東北大大学院情報科学研究科Mの学生。<br>
+                                機械学習や画像処理を良くやってたが、最近Web系に目覚めた。絶賛勉強中です（2020/10/26）<br>
+                                アニメや坂道系アイドルが好きで、風呂上がりにお酒呑みながら動画鑑賞することが楽しみ。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 box">
+                    <h5 class="display-5">最近ハマっている動画</h5>
+                    <p>王道ですが、LiSA。良いですねぇ。。。</p>
+                    <iframe width="440" height="200" src="https://www.youtube.com/embed/4DxL6IKmXx4" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="col-lg-6 order-lg-1">
+                <div class="p-5">
+                    <img class="img-fluid rounded-pill" src="{% static 'assets/img/myself/01.jpg' %}"
+                        alt="Image not found.">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <div class="container">
+        <h3><img src="{% static 'assets/img/new023_05.gif' %}" alt="Image not found.">更新情報</h3>
+        <div class="border">
+            <ul class="list-group list-group-flash">
+                <li class="list-group-item">これを作成中。。。</li>
+                <li class="list-group-item">結構大変。。。</li>
+            </ul>
+        </div>
+    </div>
+</section>
+{% endblock %}
