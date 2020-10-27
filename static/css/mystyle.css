@@ -9,6 +9,6 @@ body, #wrapper {
 footer {
     margin-top: auto;
 }
-.my-div-style{
-    margin-top: 200%;
+.comment{
+    color: gray;
 }
