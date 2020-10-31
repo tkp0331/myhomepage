@@ -29,3 +29,7 @@ class ContactView(generic.FormView):  # FormViewはフォーム処理に特化�
 
 class ResearchView(generic.TemplateView):
     template_name = "research.html"
+
+
+class CareerView(generic.TemplateView):
+    template_name = "career.html"
