@@ -3,9 +3,14 @@
 {% block title %}とある東北大院生のHP|Contact{% endblock %}
 
 {% block contents %}
+
 <div class="container mt-5">
     <div class="row mt-5">
-        <p class="comment">※お勉強のために作ってみましたが、これじゃなくてもTwitterのDMとかで構いません笑</p>
+        <div class="col-lg-12">
+            <p class="comment">※お勉強のために作ってみましたが、これじゃなくてもTwitterのDMとかで構いません笑</p>
+        </div>
+    </div>
+    <div class="row">
         <form method="post">
             {% csrf_token %}
 

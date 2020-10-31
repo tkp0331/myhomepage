@@ -51,7 +51,7 @@
                     <ul class="navbar-nav text-uppercase ml-auto">
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'homepage:index' %}">Home</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#career">Career</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#research">Research</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'homepage:research' %}">Research</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#study">Study</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#blog">Blog</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'homepage:contact' %}">Contact</a></li>
@@ -61,6 +61,22 @@
         </nav>
 
         {% block header %}{% endblock %}
+
+        {% if messages %}
+        <div class="container mt-5">
+            <div class="row">
+                <div class="mt-5 w-100">
+                    <ul class="messages" style="list-style: none;">
+                        {% for message in messages %}
+                        <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>
+                            {{ message }}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+        {% endif %}
 
         {% block contents %}{% endblock %}
 

@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}とある東北大院生のHP|Research{% endblock %}
+
+{% block contents %}
+<div class="container-fluid mt-5">
+    <div class="row border-bottom mt-5 mb-2">
+        <h5 class="mt-4">卒業研究</h5>
+    </div>
+    <div class="row">
+        <table class="table table-noborder table-borderless">
+            <tr>
+                <th>タイトル</th>
+                <td>MRIデータによるグリオーマ有無識別器の構築</td>
+            </tr>
+            <tr>
+                <th>内容</th>
+                <td>機械学習を用いてMRI画像中にグリオーマが存在するかどうかを判定する識別機を構築</td>
+            </tr>
+            <tr>
+                <th>スライド</th>
+                <td><a href="{% static 'assets/pdf/B3_final_SuzukiTakahiro.pdf' %}" target="_blank">英語版</a></td>
+            </tr>
+            <tr>
+                <th>
+                    コメント
+                </th>
+                <td>
+                    「初~~~」がてんこ盛りな卒業研究でした。苦労話は沢山あります。お酒の席で話したい。<br>
+                    特に、人データなのでデータセットを探すのが大変だった記憶があります。
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row border-bottom mt-5 mb-2">
+        <h5>修論</h5>
+    </div>
+    <div class="row">
+        <table class="table table-noborder table-borderless">
+            <tr>
+                <th>タイトル</th>
+                <td>未定</td>
+            </tr>
+            <tr>
+                <th>内容</th>
+                <td>古典計算機と量子計算機を併用したハイブリッド最適化アルゴリズムについて研究中</td>
+            </tr>
+            <tr>
+                <th>スライド</th>
+                <td><a href="#!">None</a></td>
+            </tr>
+            <tr>
+                <th>
+                    コメント
+                </th>
+                <td>
+                    就活とインターン、研究と3つの重たいことを並行に進めなくてはならず、大変です。。。
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+{% endblock %}
