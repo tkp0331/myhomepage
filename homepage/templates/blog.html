@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}とある東北大院生のHP|Blog{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/clean-blog.min.css' %}">
+{% endblock %}
+
+{% block contents %}
+
+<div class="mt-5"></div>
+<div class="mt-5"></div>
+
+{% for blog in blog_list %}
+<!-- blog_list == object_list -->
+<div class="post-preview border-bottom pb-3 mb-1">
+    <a href="{% url 'homepage:b-detail' blog.pk %}">
+        <h5 class="post-title">
+            {{ blog.title }}
+        </h5>
+        {% if blog.subtitle %}
+        <h5 class="post-subtitle">
+            {{ blog.subtitle }}
+            {% else %}
+            <b>no subtitle</b>
+            {% endif %}
+        </h5>
+    </a>
+</div>
+{% empty %}
+<h5>ブログはまだありません</h5>
+{% endfor %}
+
+
+<!-- ここからページネーションの処理 -->
+
+<!-- ページネーションが可能かどうかの判定 -->
+{% if is_paginated %}
+
+<!-- このままではブログ記事にベタっと張り付いてしまうのでcenter指定をする -->
+<ul class="pagination justify-content-center mt-5">
+
+    <!-- 前ページが存在するかどうか判定 -->
+    {% if page_obj.has_previous %}
+    <li class="page-item">
+        {# ?以降はクエリ文字列（クエリストリング）#}
+        <a class="page-link" href="?page={{ page_obj.previous_page_number }}">
+            <span aria-hidden="true">&laquo;</span>
+        </a>
+    </li>
+    {% endif %}
+
+    <!-- ページ数の表示 -->
+
+    {% for page_num in page_obj.paginator.page_range %}
+
+    {% if page_obj.number == page_num %}
+
+    <li class="page-item active"><a class="page-link" href="#">{{ page_num }}</a></li>
+
+    {% else %}
+
+    <li class="page-item"><a class="page-link" href="?page={{ page_num }}">{{ page_num }}</a></li>
+    {% endif %}
+    {% endfor %}
+
+    <!-- 次ページへのリンク -->
+    {% if page_obj.has_next %}
+    <li class="page-item">
+        <a class="page-link" href="?page={{ page_obj.next_page_number }}">
+            <span aria-hidden="true">&raquo;</span>
+        </a>
+    </li>
+    {% endif %}
+</ul>
+{% endif %}
+
+{% endblock %}

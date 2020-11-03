@@ -5,6 +5,7 @@ from django.views import generic
 from django.contrib import messages
 
 from .forms import ContactForm
+from .models import Blog
 
 # 実行中のファイル名を取得してログを吐く
 logger = logging.getLogger(__name__)
@@ -33,3 +34,20 @@ class ResearchView(generic.TemplateView):
 
 class CareerView(generic.TemplateView):
     template_name = "career.html"
+
+
+class MaterialsView(generic.TemplateView):
+    template_name = "materials.html"
+
+
+class BlogView(generic.ListView):  # ListViewはモデルオブジェクトの一覧を表示することに特化したView
+    model = Blog
+    # template_name = "blog.html"  まだ実装できていない
+    template_name = "constructing.html"
+    paginate_by = 5
+
+
+class BDetailView(generic.DetailView):  # DetailViewはDBの特定のデータ詳細を表示するのに特化したview
+    model = Blog
+    template_name = "detail.html"
+    # pk_url_kwarg = "bnum"   パスコンバータで変数名を「pk」でなくする場合に必要な記述

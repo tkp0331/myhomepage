@@ -30,10 +30,11 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
 
+    {% block head %}{% endblock %}
     <!-- my CSS -->
     <link href="{% static 'css/mystyle.css' %}" rel="stylesheet" />
 
-    {% block head %}{% endblock %}
+
 
 </head>
 
@@ -52,8 +53,8 @@
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'homepage:index' %}">Home</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'homepage:career' %}">Career</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'homepage:research' %}">Research</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#study">Study</a></li>
-                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#blog">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'homepage:materials' %}">Materials</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'homepage:blog' %}">Blog</a></li>
                         <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'homepage:contact' %}">Contact</a></li>
                     </ul>
                 </div>
@@ -88,6 +89,7 @@
                     <div class="col-lg-4 my-3 my-lg-0">
                         <a class="btn btn-dark btn-social mx-2" href="https://twitter.com/Takahiro2525vdo" target="_blank"><i class="fab fa-twitter"></i></a>
                         <a class="btn btn-dark btn-social mx-2" href="https://www.linkedin.com/in/takahiro-suzuki-0331/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="https://github.com/tkp0331" target="_blank"><i class="fab fa-github"></i></a>
                     </div>
                 </div>
             </div>
