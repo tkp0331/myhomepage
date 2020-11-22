@@ -14,7 +14,7 @@ LOGGING = {
     "version": 1,
     "disable_existing_loggers": False,
 
-    "logger": {
+    "loggers": {
 
         # Djangoが利用するロガー
         "django": {
