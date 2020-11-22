@@ -35,12 +35,12 @@ LOGGING = {
             "level": "INFO",
             "class": "logging.handlers.TimedRotatingHandler",
             "filename": os.path.join(BASE_DIR, "django.log"),
-            "formatter": "formatter1"
+            "formatter": "formatter1",
             "when": "D",  # ログローテーションの間隔の単位を指定
             "interval": 1,  # 何単位分でファイルを切り替えるか指定
             "backupCount": 7,  # 保存しておくログファイル数を指定
-        }
-    }
+        },
+    },
 
     # フォーマッタの設定
     "formatters": {
