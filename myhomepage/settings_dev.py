@@ -1,4 +1,4 @@
-from .settings_common import BASE_DIR
+from .settings_common import *
 from .settings_secret import SECRET_KEY  # 賢くないが、上書きすればよい
 
 # SECURITY WARNING: don't run with debug turned on in production!
