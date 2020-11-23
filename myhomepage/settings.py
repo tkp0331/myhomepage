@@ -10,7 +10,7 @@ ALLOWED_HOSTS = [os.environ.get("ALLOWED_HOSTS")]
 STATIC_ROOT = "/usr/share/nginx/html/static"
 MEDIA_ROOT = "/usr/share/nginx/html/media"
 
-STATIC_URL = '/usr/share/nginx/html/static/'
+STATIC_URL = '/static/'
 
 LOGGING = {
     "version": 1,
