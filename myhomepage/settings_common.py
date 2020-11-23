@@ -117,7 +117,6 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
     BASE_DIR / 'static',
-    "/usr/share/nginx/html/static",
 )
 
 MESSAGE_TAGS = {
