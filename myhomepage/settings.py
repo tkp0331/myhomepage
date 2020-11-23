@@ -34,7 +34,7 @@ LOGGING = {
         "file": {
             "level": "INFO",
             "class": "logging.handlers.TimedRotatingFileHandler",
-            "filename": os.path.join(BASE_DIR, "django.log"),
+            "filename": os.path.join(BASE_DIR, "logs/django.log"),
             "formatter": "formatter1",
             "when": "D",  # ログローテーションの間隔の単位を指定
             "interval": 1,  # 何単位分でファイルを切り替えるか指定
