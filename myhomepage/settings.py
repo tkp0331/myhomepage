@@ -6,11 +6,11 @@ DEBUG = False  # NOTE: 本番環境では必ずFalse
 # 許可するホスト名のリスト
 ALLOWED_HOSTS = [os.environ.get("ALLOWED_HOSTS")]
 
-# 静的ファイルを配置する場所
+# 静的ファイルを配置する場所を指定
 STATIC_ROOT = "/usr/share/nginx/html/static"
 MEDIA_ROOT = "/usr/share/nginx/html/media"
 
-STATIC_URL = '/static/'
+STATIC_URL = 'http://54.92.235.140/static'
 
 LOGGING = {
     "version": 1,
